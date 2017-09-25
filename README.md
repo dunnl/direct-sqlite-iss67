@@ -27,7 +27,7 @@ compile options).
 ```
 rm stack.yaml
 rm test.db
-ln -s stack.yaml.master stack.yaml
+ln -s stack.yaml.fts5 stack.yaml
 stack build
 stack exec sqlite-fts5-exe -- -f test.db -c GetOptions
 stack exec sqlite-fts5-exe -- -f test.db -c Test
