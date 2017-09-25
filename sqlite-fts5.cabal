@@ -1,0 +1,43 @@
+name:                sqlite-fts5
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/dunnl/sqlite-fts5#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Lawrence Dunn
+maintainer:          lawrence.dunn.iii@gmail.com
+copyright:           Copyright 2017 Lawrence Dunn
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+                     , sqlite-simple >= 0.4.14.0 
+                     , optparse-applicative >= 0.13.0 && < 0.14
+  default-language:    Haskell2010
+
+executable sqlite-fts5-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , sqlite-fts5
+  default-language:    Haskell2010
+
+test-suite sqlite-fts5-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , sqlite-fts5
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/dunnl/sqlite-fts5

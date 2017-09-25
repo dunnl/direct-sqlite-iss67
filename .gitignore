@@ -1,0 +1,8 @@
+.stack-work/
+*.db
+*.sqlite
+*.sqlite3
+stack.yaml
+*.swp
+*.swo
+*.DS_Store
