@@ -4,6 +4,7 @@ This is a repo for [Issue
 #67](https://github.com/IreneKnapp/direct-sqlite/issues/67) on direct-sqlite.
 
 Point `stack.yaml` to
+
     * `stack.yaml.master` to build with direct-sqlite-2.3.20
       from Stackage LTS 9.6.
     * `stack.yaml.fts5` to build with a
