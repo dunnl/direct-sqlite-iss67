@@ -1,0 +1,14 @@
+resolver: lts-9.6
+
+packages:
+- .
+- location:
+    git: https://github.com/dunnl/direct-sqlite.git
+    #commit: 3f88de  # systemlib (or use flags in stack.yaml)
+    #commit: 00534ee # with SQLITE_FTS5
+    commit: 36e4b3c  # with amal. 3.20.1 and SQLITE_FTS5
+  extra-dep: true
+extra-deps: []
+flags: {}
+extra-package-dbs: []
+
