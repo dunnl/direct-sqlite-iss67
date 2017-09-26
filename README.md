@@ -21,8 +21,8 @@ Point `stack.yaml` to
 ```
 ln -s stack.yaml.master stack.yaml
 stack build
-stack exec sqlite-fts5-exe -- -f test.db -c GetOptions
-stack exec sqlite-fts5-exe -- -f test.db -c Test
+stack exec direct-sqlite-iss67 -- -f test.db -c GetOptions
+stack exec direct-sqlite-iss67 -- -f test.db -c Test
 ```
 
 should complain about not having the FTS5 module available (as indicated in the
@@ -33,8 +33,8 @@ rm stack.yaml
 rm test.db
 ln -s stack.yaml.fts5 stack.yaml
 stack build
-stack exec sqlite-fts5-exe -- -f test.db -c GetOptions
-stack exec sqlite-fts5-exe -- -f test.db -c Test
+stack exec direct-sqlite-iss67 -- -f test.db -c GetOptions
+stack exec direct-sqlite-iss67 -- -f test.db -c Test
 ```
 
 should complain about MATCH not being available, but the compile options should
